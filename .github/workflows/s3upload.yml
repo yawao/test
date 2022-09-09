@@ -1,6 +1,6 @@
 name: s3upload
 on:
-  pull_request:
+  push:
     # client/ 配下の変更のみを実行の対象に
     paths: client/**
     branches: develop
