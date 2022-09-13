@@ -13,6 +13,8 @@ jobs:
 
       - name: Add git tag
         run: |
+          git config --global user.name ${GITHUB_ACTOR}
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git pull origin master
           git tag -a v$(date '+%F') -m '$(date '+%F')週次リリース'
           git push origin v$(date '+%F')
