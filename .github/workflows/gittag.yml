@@ -16,5 +16,5 @@ jobs:
           git config --global user.name ${GITHUB_ACTOR}
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git pull origin master
-          git tag -a v$(date '+%F')-test -m "$(date '+%F')週次リリース"
+          git tag -a v$(date '+%F')test -m "$(date '+%F')週次リリース"
           git push origin v$(date '+%F')
